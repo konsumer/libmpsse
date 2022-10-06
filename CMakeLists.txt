@@ -43,3 +43,4 @@ install(TARGETS ${PROJECT_NAME} PUBLIC_HEADER)
 
 # TODO: add targets for examples (disabled by default, with option to enable)
 # TODO: add target for python (disabled by default, with option to enable)
+# TODO: add nodejs NAPI bindings (disabled by default, with option to enable)
