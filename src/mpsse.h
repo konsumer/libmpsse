@@ -6,12 +6,7 @@ extern "C" {
 #endif
 
 #include <stdint.h>
-
-#if HAVE_LIBFTDI1 == 1
-#include <libftdi1/ftdi.h>
-#else
 #include <ftdi.h>
-#endif
 
 #define MPSSE_OK		0
 #define MPSSE_FAIL		-1

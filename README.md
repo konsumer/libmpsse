@@ -57,6 +57,14 @@ To build applications in C, you must include the `mpsse.h` header file:
 
     $ gcc test.c -o test -lmpsse
 
+To build the library:
+
+```
+cmake -Bbuild -S.
+cd build
+make
+```
+
 # PHYSICAL CONNECTIONS
 
 In order to speak to SPI or I2C devices, you must establish the proper physical connections between the target

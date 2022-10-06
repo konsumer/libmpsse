@@ -10,7 +10,6 @@
 #include <stdint.h>
 #include <time.h>
 
-#include "config.h"
 #include "mpsse.h"
 #include "support.h"
 
