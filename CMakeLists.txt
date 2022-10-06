@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.11)
+set(CMAKE_C_STANDARD 99)
+
 find_package(PkgConfig)
+include(GNUInstallDirs)
 
 project (mpsse
   VERSION 1.3.2
@@ -8,8 +11,6 @@ project (mpsse
   LANGUAGES C)
 
 add_compile_definitions(PACKAGE_VERSION="${CMAKE_PROJECT_VERSION}")
-
-# set(CMAKE_C_STANDARD 99)
 
 if ( CMAKE_COMPILER_IS_GNUCC )
     set(CMAKE_C_FLAGS "-fPIC ${CMAKE_C_FLAGS} -Wno-unused-result -Wall -Wextra")
@@ -40,3 +41,6 @@ target_link_libraries(${PROJECT_NAME} ${FTDI_LINK_LIBRARIES})
 target_include_directories(${PROJECT_NAME} PUBLIC ${FTDI_INCLUDE_DIRS})
 target_compile_options(${PROJECT_NAME} PUBLIC ${FTDI_CFLAGS_OTHER})
 target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCES})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES PUBLIC_HEADER src/mpsse.h)
+install(TARGETS ${PROJECT_NAME} PUBLIC_HEADER)
