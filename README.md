@@ -7,7 +7,7 @@ chips. Additionally, it provides control over the GPIO pins on the FTDI chips an
 bitbang mode as well. Based around the libftdi library, it is written in C and includes a Python wrapper 
 courtesy of swig.
 
-See [INSTALL](docs/INSTALL) for the installation instructions.
+See [INSTALL](docs/INSTALL.md) for the installation instructions.
 
 # LIBRARY API
 
