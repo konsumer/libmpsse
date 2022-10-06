@@ -1,17 +1,19 @@
-PREREQUISITES
+## PREREQUISITES
 
-	Libmpsse is currently supported on the Linux and OSX platforms.
+Libmpsse is currently supported on the Linux and OSX platforms.
 
-	Libmpsse requires swig as well as the libftdi and python development packages. 
-	These can typically be installed by your Linux distro's package manager, for Debian:
+Libmpsse requires libftdi development package. 
+This can typically be installed by your Linux distro's package manager, for Debian:
 
-		# apt-get install swig libftdi-dev python-dev autoconf automake libtool
+```
+sudo apt-get install libftdi-dev cmake
+```
 
-	For OSX, you will likely need to at least install libftdi from source.
+For OSX, you can use [homebrew](https://brew.sh/): `brew install libftdi`
 
-INSTALLATION
+## INSTALLATION
 
-	With the required prerequisites installed, libmpsse can be built and installed:
+With the required prerequisites installed, libmpsse can be built and installed:
 
 ```sh
 cmake -Bbuild -S.
@@ -20,5 +22,5 @@ make
 sudo make install
 ```
 
-NOTE: I haven't setup python, yet.
+> **NOTE**: I haven't setup python, yet.
 	
