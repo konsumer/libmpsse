@@ -1,22 +1,24 @@
 cmake_minimum_required(VERSION 3.11)
 set(CMAKE_C_STANDARD 99)
 
-project (mpsse
+project(
+  mpsse
   VERSION 1.3.2
   DESCRIPTION "Library for interfacing with SPI/I2C devices via FTDI's FT-2232 family of USB to serial chips"
   HOMEPAGE_URL "https://github.com/l29ah/libmpsse"
-  LANGUAGES C)
+  LANGUAGES C
+)
 
-find_package (LibFTDI1 NO_MODULE REQUIRED)
+find_package(LibFTDI1 NO_MODULE REQUIRED)
 include (${LIBFTDI_USE_FILE})
 include(GNUInstallDirs)
 
-if ( CMAKE_COMPILER_IS_GNUCC )
-    set(CMAKE_C_FLAGS "-fPIC ${CMAKE_C_FLAGS} -Wno-unused-result -Wall -Wextra")
+if (CMAKE_COMPILER_IS_GNUCC)
+  set(CMAKE_C_FLAGS "-fPIC ${CMAKE_C_FLAGS} -Wno-unused-result -Wall -Wextra")
 endif()
 
-if ( MSVC )
-    set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /w")
+if (MSVC)
+  set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} /w")
 endif()
 
 if(NOT CMAKE_BUILD_TYPE)
